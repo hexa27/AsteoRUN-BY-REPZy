@@ -1,0 +1,102 @@
+/* Menghilangkan margin dan membuat body penuh layar */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Mencegah layar bisa di-scroll */
+    background-color: #050510;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #00ffff;
+}
+
+#gameContainer {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+canvas {
+    display: block;
+    background: linear-gradient(to bottom, #020111 0%, #20124d 100%);
+}
+
+/* Overlay UI untuk Game Over */
+#uiLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; /* Agar sentuhan tembus ke canvas saat main */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#gameOverScreen {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border: 2px solid #ff0055;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 30px #ff0055;
+    pointer-events: auto; /* Agar tombol bisa diklik */
+}
+
+#gameOverScreen h2 {
+    color: #ff0055;
+    text-shadow: 0 0 10px #ff0055;
+    font-size: 36px;
+    margin-top: 0;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: transparent;
+    color: #00ffff;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #00ffff inset, 0 0 10px #00ffff;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #00ffff;
+    color: #000;
+    box-shadow: 0 0 20px #00ffff inset, 0 0 20px #00ffff;
+}
+
+/* Instruksi di atas layar */
+#instructions {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+    text-shadow: 0 0 5px #000;
+    z-index: 5;
+}
+
+#instructions p {
+    margin: 5px 0;
+    color: #bdc3c7;
+    font-size: 14px;
+}
+
+#instructions h1 {
+    margin: 0;
+    font-size: 24px;
+    text-shadow: 0 0 10px #00ffff;
+}
