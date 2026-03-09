@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Game Tempur Luar Angkasa HD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="gameContainer">
+        <div id="instructions">
+            <h1>AsteoRUN</h1>
+            <p>By: REPZy COMPANY</p>
+        </div>
+        
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="uiLayer" class="hidden">
+            <div id="gameOverScreen">
+                <h2>GAME OVER</h2>
+                <p style="font-size: 20px; color: white;">Skor Akhir: <span id="finalScore">0</span></p>
+                <button onclick="resetGame()">MAIN LAGI</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
