@@ -222,7 +222,7 @@ function updateGame() {
             x: Math.random() * (canvas.width - size * 2) + size,
             y: -30,
             size: size,
-            speed: Math.random() * 2 + 3 + (score * 0.03)
+            speed: Math.random() * 1 + 2 + (score * 0.05)
         });
     }
 
