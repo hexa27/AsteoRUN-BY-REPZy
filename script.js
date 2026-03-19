@@ -215,14 +215,14 @@ function updateGame() {
     }
 
     // Responsif spawn musuh berdasarkan lebar layar (layar lebar = musuh lebih banyak)
-    let spawnRate = (canvas.width / 100000) + (score * 0.005);
+    let spawnRate = (canvas.width / 100000) + (score * 0.0001);
     if (Math.random() < spawnRate) {
         let size = Math.random() * 10 + 15;
         enemies.push({
             x: Math.random() * (canvas.width - size * 1) + size,
             y: -35,
             size: size,
-            speed: Math.random() * 1 + 2 + (score * 0.02)
+            speed: Math.random() * 2 + 2 + (score * 0.02)
         });
     }
 
