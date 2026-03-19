@@ -13,7 +13,7 @@ const player = {
     y: 0,
     width: 40,
     height: 40,
-    speed: 7,
+    speed: 3,
     cooldown: 0
 };
 
@@ -215,7 +215,7 @@ function updateGame() {
     }
 
     // Responsif spawn musuh berdasarkan lebar layar (layar lebar = musuh lebih banyak)
-    let spawnRate = (canvas.width / 10000) + (score * 0.0005);
+    let spawnRate = (canvas.width / 10000) + (score * 0.005);
     if (Math.random() < spawnRate) {
         let size = Math.random() * 10 + 15;
         enemies.push({
