@@ -205,8 +205,8 @@ function updateGame() {
     
     if (player.cooldown > 0) player.cooldown--;
     if (isShooting && player.cooldown === 0) {
-        bullets.push({ x: player.x, y: player.y - player.height / 2, speed: 12 });
-        player.cooldown = 12; // Kecepatan tembak
+        bullets.push({ x: player.x, y: player.y - player.height / 2, speed: 15 });
+        player.cooldown = 15; // Kecepatan tembak
     }
 
     for (let i = bullets.length - 1; i >= 0; i--) {
@@ -219,10 +219,10 @@ function updateGame() {
     if (Math.random() < spawnRate) {
         let size = Math.random() * 10 + 15;
         enemies.push({
-            x: Math.random() * (canvas.width - size * 2) + size,
-            y: -30,
+            x: Math.random() * (canvas.width - size * 1) + size,
+            y: -35,
             size: size,
-            speed: Math.random() * 1 + 2 + (score * 0.05)
+            speed: Math.random() * 1 + 2 + (score * 5)
         });
     }
 
